@@ -1,4 +1,4 @@
-[UID2 Overview](./README.md) > Supply-Side Workflow
+[UID2 Overview](./README-ja.md) > Supply-Side Workflow
 
 # Supply-Side Workflow Overview
 
@@ -36,7 +36,7 @@ The following steps provide a high-level outline of the workflow intended for or
 
 For integration scenarios, token management, and other details, see [Publisher Integration Guides](/api/v2/guides/README.md). See also [Endpoints](/api/v2/endpoints/README.md).
 
-インテグレーションシナリオ、トークン管理、その他の詳細については、[Publisher Integration Guides](/api-ja/v2/guides/README.md)を参照してください。エンドポイント](/api-ja/v2/endpoints/README.md)も参照してください。
+インテグレーションシナリオ、トークン管理、その他の詳細については、[Publisher Integration Guides](/api-ja/v2/guides/README.md) を参照してください。[Endpoints](/api-ja/v2/endpoints/README.md) も参照してください。
 
 ### Direct Integration Requirements
 

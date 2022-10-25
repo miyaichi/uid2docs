@@ -1,4 +1,4 @@
-[UID2 Overview](./README.md) > Third-Party Data Provider Workflow
+[UID2 Overview](./README-ja.md) > Third-Party Data Provider Workflow
 
 # Third-Party Data Provider Workflow Overview
 
@@ -38,4 +38,4 @@ For details, see [Advertiser and Third-party Data Provider Integration Guide](/a
 - UID2 Operator とインテグレーションして UID2 を生成し、ソルトバケットのローテーションを処理する。
 - UID2 Operator の API にアクセスできること。<br/>広告主によっては、CDP、データオンボーダー、またはその他のサービスプロバイダを経由する場合もあります。
 
-詳細は、[Advertiser and Third-party Data Provider Integration Guide](/api/v2/guides/advertiser-dataprovider-guide.md)を参照してください。
+詳細は、[Advertiser and Third-party Data Provider Integration Guide](/api-ja/v2/guides/advertiser-dataprovider-guide.md) を参照してください。
