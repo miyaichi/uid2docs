@@ -26,7 +26,7 @@ For integration guides, supported SDKs, and endpoint reference, see [Getting Sta
 - [FAQs（よくある質問）](#faqs)
 - [License（ライセンス）](#license)
 
-インテグレーションガイド、対応 SDK、エンドポイントリファレンスについては、[Getting Started](/api-ja/README.md)をご覧ください。
+インテグレーションガイド、対応 SDK、エンドポイントリファレンスについては、[Getting Started](/api-ja/README.md) をご覧ください。
 
 ## Introduction
 
@@ -54,7 +54,7 @@ The UID2 framework has the following principles as its foundation:
 
 - **Consumer control**: Consumers can opt out of UID2 at any time through the [Transparency and Control Portal](https://transparentadvertising.org).
 
-UID2 フレームワークは、以下の原則を基本としています。
+UID2 フレームワークは、以下の原則を基本としています:
 
 - **First-party relationships**: UID2 により、広告主はオープンインターネット上のパブリッシャーウェブサイトでファーストパーティデータを有効にすることができます。
 
@@ -62,7 +62,7 @@ UID2 フレームワークは、以下の原則を基本としています。
 
 - **Open source**: UID2 の[コンポーネント](#components)のソースコードは一般に公開されています。
 
-- **Interoperable**: T このフレームワークにより、他の ID ソリューション（商用およびプロプライエタリ）が UID2 トークンを統合し、提供できるようになります。
+- **Interoperable**: このフレームワークにより、他の ID ソリューション（商用およびプロプライエタリ）が UID2 Token を統合し、提供できるようになります。
 
 - **Secure and encrypted data**: UID2 は、ユーザーやその他の参加者のデータを保護するために、複数のセキュリティレイヤを利用しています。
 
@@ -82,9 +82,9 @@ The UID2 framework is built on the following technical principles:
 
 - **Self-reliant**: UID2 does not rely on external services for processing of real-time bidding (RTB) data.
 
-UID2 フレームワークは、以下の技術原則に基づいて構築されています。
+UID2 フレームワークは、以下の技術原則に基づいて構築されています:
 
-- **Distributed integration**:複数の認証済み統合パスにより、パブリッシャー社、広告主、サードパーティデータプロバイダーが UID2 Token を管理および交換するためのオプションが提供されます。
+- **Distributed integration**: 複数の認証済みインテグレーションパスにより、パブリッシャー、広告主、サードパーティデータプロバイダーが UID2 Token を管理および交換するためのオプションが提供されます。
 
 - **Decentralized storage**: このフレームワークでは、個人データのマッピングを一元的に保管することはありません。すべての参加者が自分自身のデータのみを管理します。
 
@@ -119,12 +119,12 @@ UID2 is a deterministic ID that is based on personally identifiable information 
 | **Raw UID2**                       | No                    | An unencrypted alphanumeric identifier created through the UID2 APIs or SDKs with the user's verifiable personal data, such as an email address or a phone number, as input.<br/><br/>To prevent re-identification of the original personal data, each raw UID2 utilizes hashing and salting. Raw UID2s are designed to be stored by advertisers, third-party data providers, and demand-side platforms (DSPs).      |
 | **UID2 Token (Advertising Token)** | Yes                   | An encrypted form of a raw UID2. UID2 tokens are generated from hashed or unhashed email addresses or phone numbers that are converted to raw UID2s and then encrypted to ensure protection in the bid stream.<br/><br/>UID2 tokens are designed to be used by publishers or publisher service providers. Supply-side platforms (SSPs) pass UID2 tokens in the bid stream and DSPs decrypt them at bid request time. |
 
-UID2 は、メールアドレスや電話番号など、個人を特定できる情報（PII）を基にした決定論的な ID です。UID2 には、raw UID2 と UID2 Token（Advertising Token とも呼ばれる）の 2 種類があります。以下の表で、それぞれのタイプについて説明します。
+UID2 は、メールアドレスや電話番号など、個人を特定できる情報（PII）を基にした決定論的な ID です。UID2 には、raw UID2 と UID2 Token（Advertising Token とも呼ばれます）の 2 種類があります。以下の表で、それぞれのタイプについて説明します。
 
-| ID Type                            | Shared in Bid Stream? | Description                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| :--------------------------------- | :-------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Raw UID2**                       | No                    | UID2 API または SDK を使用して、メールアドレスや電話番号などの検証可能な個人データを入力として作成される、暗号化されていない英数字の識別子です。<br/><br/>元の個人データの再識別を防ぐために、各 Raw UID2 はハッシュ化とソルト化をおこなっています。Raw UID2 は、広告主、サードパーティデータプロバイダー、およびデマンドサイドプラットフォーム（DSP）によって保存されるよう設計されています。                                                |
-| **UID2 Token (Advertising Token)** | Yes                   | Raw UID2 を暗号化したもの。UID2 Token は、ハッシュ化またはハッシュ化されていないメールアドレスや電話番号から生成され、Raw UID2 に変換された後、ビッドストリームでの保護を確実にするために暗号化されます。<br/><br/>UID2 Token ンは、パブリッシャーまたはパブリッシャーサービスプロバイダが使用するよう設計されています。サプライサイドプラットフォーム（SSP）は、ビッドストリームで UID2 Token を渡し、DSP は入札要求時にそれを復号化します。 |
+| ID Type                            | Shared in Bid Stream? | Description                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| :--------------------------------- | :-------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Raw UID2**                       | No                    | UID2 API または SDK を使用して、メールアドレスや電話番号などの検証可能な個人データを入力として作成される、暗号化されていない英数字の識別子です。<br/><br/>元の個人データの再識別を防ぐために、各 Raw UID2 はハッシュ化とソルト化をおこなっています。Raw UID2 は、広告主、サードパーティデータプロバイダー、およびデマンドサイドプラットフォーム（DSP）によって保存されるよう設計されています。                                                    |
+| **UID2 Token (Advertising Token)** | Yes                   | Raw UID2 を暗号化したもの。UID2 Token は、ハッシュ化またはハッシュ化されていないメールアドレスや電話番号から生成され、Raw UID2 に変換された後、ビッドストリームでの保護を確実にするために暗号化されます。<br/><br/>UID2 Token は、パブリッシャーまたはパブリッシャーサービスプロバイダが使用するよう設計されています。サプライサイドプラットフォーム（SSP）は、ビッドストリームで UID2 Token を渡し、DSP は入札リクエスト時にそれを復号化します。 |
 
 ### Components
 
@@ -132,7 +132,7 @@ The UID2 framework consists of the following components, all of which are curren
 
 | Component                           | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | :---------------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Core Service**                    | A centralized service that stores salt secrets and encryption keys and manages access to the distributed UID2 system.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| **Core Service**                    | A centralized service that stores salt secrets and encryption keys and manages access to the distributed UID2 system. x                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 | **Operator Service**                | A service that enables the management and storage of encryption keys and salts from the UID2 Core Service, hashing of users' personal data, encryption of raw UID2s, and decryption of UID2 tokens. There can be multiple instances of the service (public or private) operated by multiple [participants](#participants), known as operators.<br/><br/>Open operators run publicly available instances of the Operator Service and make them available to all relevant UID2 [participants](#participants). There might also be closed operators that run private instances of the Operator Service exclusively for their own use. All instances are designed with protections to keep critical UID2 data secure and interoperable, regardless of who operates the service. |
 | **Opt-Out Service**                 | A global service that manages and stores user opt-out requests and disseminates them to publishers, operator service instances, and DSPs.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 | **Transparency and Control Portal** | A user-facing website, [https://transparentadvertising.org](https://transparentadvertising.org), that allows consumers to opt out of UID2 at any time.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
@@ -143,7 +143,7 @@ UID2 フレームワークは以下のコンポーネントで構成されてお
 | :---------------------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Core Service**                    | ソルトシークレットと暗号鍵を保管し、分散型 UID2 システムへのアクセスを管理する集中型サービス。                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 | **Operator Service**                | UID2 コアサービスからの暗号鍵とソルトの管理・保管、ユーザーの個人情報のハッシュ化、Raw UID2 の暗号化、UID2 Token の復号を可能にするサービスです。<br/><br/>Open Operator は、オペレータサービスの公開インスタンスを実行し、関連するすべての UID2 [参加者](#participants) が利用できるようにします。また、オペレータサービスのプライベートなインスタンスを自分たちだけのために実行する Closed Operator も存在します。どのインスタンスも、誰がサービスを運営するかに関わらず、重要な UID2 データを安全に保ち、相互運用できるように保護設計されています。 |
-| **Opt-Out Service**                 | ユーザーのオプトアウト要求を管理・保存し、パブリッシャー、オペレータのサービスインスタンス、DSP に配信するグローバルサービスです。                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| **Opt-Out Service**                 | ユーザーのオプトアウトリクエストを管理・保存し、パブリッシャー、オペレータのサービスインスタンス、DSP に配信するグローバルサービスです。                                                                                                                                                                                                                                                                                                                                                                                                               |
 | **Transparency and Control Portal** | ユーザー向けウェブサイト [https://transparentadvertising.org](https://transparentadvertising.org) では、消費者がいつでも UID2 からの脱退を選択できるようになっています。                                                                                                                                                                                                                                                                                                                                                                               |
 
 ### Participants
@@ -193,12 +193,16 @@ The following diagram summarizes all four workflows. For each workflow, the [par
 
 以下の表は、UID2 フレームワークの主要な 4 つのワークフローと、その概要へのリンクです。また、各ワークフローの図、インテグレーションステップ、FAQ、その他の関連情報を含むインテグレーションガイドへのリンクも掲載しています。
 
-| Workflow                                                                  | Intended Primary Participants                                                                                                                                                                                                  | Integration Guide                                                                                                                                    |
-| :------------------------------------------------------------------------ | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Buy-Side**<br/>[Overview](./workflow-overview-buy-side.md)              | ビッドストリームで UID2 トークンの取引を行う DSP。                                                                                                                                                                             | [DSP](./api/v2/guides/dsp-guide.md)                                                                                                                  |
-| **Data Provider**<br/>[Overview](./workflow-overview-3p-data-provider.md) | ユーザーデータを収集し、DSP にプッシュする組織。                                                                                                                                                                               | [Advertiser and Third-Party Data Provider](./api/v2/guides/advertiser-dataprovider-guide.md)                                                         |
-| **Supply-Side**<br/>[Overview](./workflow-overview-supply-side.md)        | SSP を介して UID2 トークンを入札ストリームに伝播する組織。<br/>NOTE: パブリッシャーは、[UID2 SDK](./api/v2/sdks/client-side-identity.md) を活用するか、独自のカスタムで Server-Only インテグレーションを行うかを選択できます。 | [Publisher (with UID2 SDK)](./api/v2/guides/publisher-client-side.md)<br/>[Publisher (Server-Only)](./api/v2/guides/custom-publisher-integration.md) |
-| **Opt-Out**<br/>[Overview](./workflow-overview-opt-out.md)                | パブリッシャーやその SSO プロバイダー、その他の ID プロバイダーと関わる消費者。                                                                                                                                                | N/A                                                                                                                                                  |
+| Workflow                                                                  | Intended Primary Participants                                                                                                                                                                                                | Integration Guide                                                                                                                                    |
+| :------------------------------------------------------------------------ | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Buy-Side**<br/>[Overview](./workflow-overview-buy-side.md)              | ビッドストリームで UID2 Token の取引を行う DSP。                                                                                                                                                                             | [DSP](./api/v2/guides/dsp-guide.md)                                                                                                                  |
+| **Data Provider**<br/>[Overview](./workflow-overview-3p-data-provider.md) | ユーザーデータを収集し、DSP にプッシュする組織。                                                                                                                                                                             | [Advertiser and Third-Party Data Provider](./api/v2/guides/advertiser-dataprovider-guide.md)                                                         |
+| **Supply-Side**<br/>[Overview](./workflow-overview-supply-side.md)        | SSP を介して UID2 Token を入札ストリームに伝播する組織。<br/>NOTE: パブリッシャーは、[UID2 SDK](./api/v2/sdks/client-side-identity.md) を活用するか、独自のカスタムで Server-Only インテグレーションを行うかを選択できます。 | [Publisher (with UID2 SDK)](./api/v2/guides/publisher-client-side.md)<br/>[Publisher (Server-Only)](./api/v2/guides/custom-publisher-integration.md) |
+| **Opt-Out**<br/>[Overview](./workflow-overview-opt-out.md)                | パブリッシャーやその SSO プロバイダー、その他の ID プロバイダーと関わる消費者。                                                                                                                                              | N/A                                                                                                                                                  |
+
+次の図は、4 つのワークフローをすべてまとめたものです。各ワークフローについて、[参加者](#participants)、[コンポーネント](#components)、[UID2 識別子タイプ](#uid2-identifier-types)、および番号付きステップが色分けされています。
+
+![The UID2 Ecosystem](/images/UID2-workflows.jpg)
 
 ## FAQs
 
@@ -224,13 +228,13 @@ Opt-outs relate to opting out of targeted advertising, which is handled through 
 
 以下は、UID2 フレームワークに関するよくある質問です。
 
-#### EUID インフラストラクチャのインテグレーションパートナー (SSP、第三者データプロバイダー、測定プロバイダー) はすべて、自動的に UID2 に統合されるのですか？
+#### EUID インフラストラクチャのインテグレーションパートナー (SSP、サードパーティデータプロバイダー、測定プロバイダー) はすべて、自動的に UID2 に統合されるのですか？
 
 いいえ。UID2 は EUID とは別の、独自のフレームワークとして機能します。そのため、EUID フレームワークの使用やアクセスに関する書類を作成しても、UID2 フレームワークの使用やアクセスが自動的に許可されるわけではありません。新規契約は UID2 用に締結する必要があります。
 
 #### ユーザーは、自分の UID2 ID に関連付けられたターゲット広告をオプトアウトすることができますか？
 
-はい。[Transparency and Control Portal](https://transparentadvertising.org) を通して、ユーザーは自分の UID2 ID に関連付けられたターゲティング広告の配信を拒否することができます。各要求は、UID2 オプトアウトサービスと UID2 Operator を通じて、関連するすべての参加者に配信されます。
+はい。[Transparency and Control Portal](https://transparentadvertising.org) を通して、ユーザーは自分の UID2 ID に関連付けられたターゲティング広告の配信を拒否することができます。各リクエストは、UID2 オプトアウトサービスと UID2 Operator を通じて、関連するすべての参加者に配信されます。
 
 パブリッシャーやサービスプロバイダの中には、ユーザーが UID2 フレームワークに参加しているかどうかに基づいて自社製品へのアクセスを制限するオプションを持っているところがありますが、このことをユーザーとの価値交換ダイアログの一部として伝えるのは、パブリッシャーの責任です。
 
